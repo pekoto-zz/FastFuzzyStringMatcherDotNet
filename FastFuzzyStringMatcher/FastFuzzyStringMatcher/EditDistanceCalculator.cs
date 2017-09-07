@@ -3,37 +3,29 @@
 namespace FastFuzzyStringMatcher
 {
     /// <summary>
-    /// <para>
-    /// Calculates the number of operations it takes to turn one string into another.
-    /// Also known as the Levenshtein distance.
+    /// <para/>Calculates the number of operations it takes to turn one string into another.
+    /// <para/>Also known as the Levenshtein distance.
     /// This implementation uses the iterative approach with two matrix rows. Case insensitive.
-    /// </para>
-    /// <para>
-    /// See <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Wikipedia</a>.
-    /// </para>
-    /// <para>
-    /// Available operations are:
+    /// <para/>See <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance on Wikipedia</a>.
+    /// <para/>Available operations are:
     /// <list type="bullet">
-    /// <item>substitution</item>
-    /// <item>insertion</item>
-    /// <item>deletion</item>
+    /// <item><description>substitution</description></item>
+    /// <item><description>insertion</description></item>
+    /// <item><description>deletion</description></item>
     /// </list>
-    /// </para>
-    /// <para>
-    /// <example>Example:
-    /// To turn kitten --> sitting:
-    /// kitten --> sitten (substitute "s" for "k")
-    /// sitten --> sittin(substitute "e" for "i")
-    /// sittin --> sitting(insert "g")
-    /// </para>
-    /// <para>
-    /// Edit distance = 3
-    /// </para>
-    /// </example> 
+    /// <example>
+    /// <para/>Example:
+    /// <para/>To turn kitten --> sitting:
+    /// <para/>kitten --> sitten (substitute "s" for "k")
+    /// <para/>sitten --> sittin(substitute "e" for "i")
+    /// <para/>sittin --> sitting(insert "g")
+    /// 
+    /// <para/>Edit distance = 3
+    /// </example>
     /// </summary>
-    public static class EditDistanceCalculator
+    public class EditDistanceCalculator
     {
-        public static int CalcuclateEditDistance(String str1, String str2)
+        public int CalculateEditDistance(String str1, String str2)
         {
             if(str1 == null || str2 == null)
             {
@@ -91,7 +83,7 @@ namespace FastFuzzyStringMatcher
             return previousRow[str1RowLength - 1];
         }
 
-        private static int Min(int a, int b, int c)
+        private int Min(int a, int b, int c)
         {
             return Math.Min(Math.Min(a, b), c);
         }

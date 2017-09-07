@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFuzzyStringMatcher", "FastFuzzyStringMatcher\FastFuzzyStringMatcher.csproj", "{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastFuzzyStringMatcher", "FastFuzzyStringMatcher\FastFuzzyStringMatcher.csproj", "{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFuzzyStringMatcherTests", "FastFuzzyStringMatcherTests\FastFuzzyStringMatcherTests.csproj", "{0E70D54C-125A-47DC-AA05-A422D6CBD538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E70D54C-125A-47DC-AA05-A422D6CBD538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E70D54C-125A-47DC-AA05-A422D6CBD538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E70D54C-125A-47DC-AA05-A422D6CBD538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E70D54C-125A-47DC-AA05-A422D6CBD538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
