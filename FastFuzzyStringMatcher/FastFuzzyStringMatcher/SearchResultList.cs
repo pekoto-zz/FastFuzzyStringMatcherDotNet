@@ -15,5 +15,29 @@ namespace FastFuzzyStringMatcher
         {
             return this.FirstOrDefault(x => x.Keyword.Equals(keyword)) != null;
         }
+
+        public void SortByClosestMatch()
+        {
+            this.Sort(new SortByClosestMatchComparer());
+        }
+
+        private class SortByClosestMatchComparer: IComparer<SearchResult<T>>
+        {
+            public int Compare(SearchResult<T> a, SearchResult<T> b)
+            {
+                if(a.MatchPercentage > b.MatchPercentage)
+                {
+                    return 1;
+                }
+                else if (a.MatchPercentage < b.MatchPercentage)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
     }
 }

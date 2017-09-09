@@ -9,9 +9,9 @@ namespace FastFuzzyStringMatcher
     /// <para/>See <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance on Wikipedia</a>.
     /// <para/>Available operations are:
     /// <list type="bullet">
-    /// <item><description>substitution</description></item>
-    /// <item><description>insertion</description></item>
-    /// <item><description>deletion</description></item>
+    /// <item>substitution</item>
+    /// <item>insertion</item>
+    /// <item>deletion</item>
     /// </list>
     /// <example>
     /// <para/>Example:

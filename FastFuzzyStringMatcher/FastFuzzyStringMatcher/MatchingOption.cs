@@ -10,6 +10,6 @@ namespace FastFuzzyStringMatcher
     public enum MatchingOption
     {
         NONE,
-        REMOVE_SPACES_AND_LINEBREAKS
+        REMOVE_SPACING_AND_LINEBREAKS
     }
 }
