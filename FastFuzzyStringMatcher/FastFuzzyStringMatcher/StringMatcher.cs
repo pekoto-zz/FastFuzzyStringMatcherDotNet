@@ -114,7 +114,7 @@ namespace FastFuzzyStringMatcher
     	// Search using % matching.
         // More user-friendly and robust when searching strings of variable length,
         // but may lead to strings slightly less than the matchPercentage being returned due to rounding.
-        public SearchResultList<T> search(String keyword, float matchPercentage)
+        public SearchResultList<T> Search(String keyword, float matchPercentage)
         {
             keyword = GetNormalizedKeyword(keyword);
             int distanceThreshold = ConvertPercentageToEditDistance(keyword, matchPercentage);
@@ -180,7 +180,7 @@ namespace FastFuzzyStringMatcher
             return 100.0f - (((float)editDistance / longestWordLength) * 100.0f);
         }
 
-        public void printTree()
+        public void PrintTree()
         {
             _root.PrintHierarchy(0);
         }

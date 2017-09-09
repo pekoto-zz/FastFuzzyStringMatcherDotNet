@@ -25,11 +25,11 @@ namespace FastFuzzyStringMatcher
         {
             public int Compare(SearchResult<T> a, SearchResult<T> b)
             {
-                if(a.MatchPercentage > b.MatchPercentage)
+                if(a.MatchPercentage < b.MatchPercentage)
                 {
                     return 1;
                 }
-                else if (a.MatchPercentage < b.MatchPercentage)
+                else if (a.MatchPercentage > b.MatchPercentage)
                 {
                     return -1;
                 }
