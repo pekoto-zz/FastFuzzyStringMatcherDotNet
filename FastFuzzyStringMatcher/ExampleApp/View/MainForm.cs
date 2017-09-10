@@ -12,6 +12,12 @@ using System.Windows.Forms;
 
 namespace ExampleApp
 {
+    /// <summary>
+    /// <para/>An example app showing how StringMatcher can be used to fuzzy search a translation memory dictionary. 
+    /// <para/>Note: This is a rough-and-ready example, and does not contain threading or error handling.
+    /// <para/>See<a href="http://www.edrdg.org/jmdict/j_jmdict.html"> The JMDict Project</a>.
+    /// <para/>See also unit tests in FastFuzzyStringMatcherTests for further examples of usage.
+    /// </summary>
     public partial class MainForm : Form
     {
         private EnglishJapaneseSearchController _searchController;
@@ -21,7 +27,9 @@ namespace ExampleApp
             InitializeComponent();
             LoadSearchController();
         }
-
+        
+        /// This will take a little time while translation pairs are read from Resources.
+        /// In a real app, you should load this data on a separate thread to keep the UI responsive.
         private void LoadSearchController()
         {
             _searchController = new EnglishJapaneseSearchController();
@@ -62,7 +70,7 @@ namespace ExampleApp
             {
                 SearchResult<String> result = results[i];
 
-                // Due to rounding we occasionally get some false positives.
+                // Due to rounding we occasionally get some false positives when searching using %.
                 // We can hard-filter these out like this if desired.
                 if (result.MatchPercentage >= matchPercentage)
                 {

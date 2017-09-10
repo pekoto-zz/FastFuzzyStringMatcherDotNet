@@ -17,8 +17,8 @@ namespace FastFuzzyStringMatcher
     /// <para/>Example:
     /// <para/>To turn kitten --> sitting:
     /// <para/>kitten --> sitten (substitute "s" for "k")
-    /// <para/>sitten --> sittin(substitute "e" for "i")
-    /// <para/>sittin --> sitting(insert "g")
+    /// <para/>sitten --> sittin (substitute "e" for "i")
+    /// <para/>sittin --> sitting (insert "g")
     /// 
     /// <para/>Edit distance = 3
     /// </example>
@@ -42,24 +42,24 @@ namespace FastFuzzyStringMatcher
                 return str1.Length;
             }
 
-            int str1RowLength = str1.Length + 1;
-            int str2RowLength = str2.Length + 1;
+            int rowLength = str1.Length + 1;
+            int columnLength = str2.Length + 1;
 
-            int[] previousRow = new int[str1RowLength];
-            int[] currentRow = new int[str1RowLength];
+            int[] previousRow = new int[rowLength];
+            int[] currentRow = new int[rowLength];
 
             // Initialise the first row of the distance matrix
-            for (int i = 0; i < str1RowLength; i++)
+            for (int i = 0; i < rowLength; i++)
             {
                 previousRow[i] = i;
             }
 
-            for (int rowIndex = 1; rowIndex < str2RowLength; rowIndex++)
+            for (int rowIndex = 1; rowIndex < columnLength; rowIndex++)
             {
                 // Initialise the first column of the distance matrix
                 currentRow[0] = rowIndex;
 
-                for (int colIndex = 1; colIndex < str1RowLength; colIndex++)
+                for (int colIndex = 1; colIndex < rowLength; colIndex++)
                 {
                     char str1Char = Char.ToLower(str1[colIndex - 1]);
                     char str2Char = Char.ToLower(str2[rowIndex - 1]);
@@ -80,7 +80,7 @@ namespace FastFuzzyStringMatcher
             }
 
             // The distance is the last element of the last row
-            return previousRow[str1RowLength - 1];
+            return previousRow[rowLength - 1];
         }
 
         private int Min(int a, int b, int c)

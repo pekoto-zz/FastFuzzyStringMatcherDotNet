@@ -92,22 +92,22 @@ namespace FastFuzzyStringMatcherTests
         }
 
         [TestMethod]
-        public void TestStringTwoEmpty()
+        public void TestStringOneEmpty()
         {
-            String s1 = "Test";
-            String s2 = String.Empty;
-            
+            String s1 = String.Empty;
+            String s2 = "Test";
+
             int distance = _distanceCalculator.CalculateEditDistance(s1, s2);
 
             Assert.AreEqual(4, distance);
         }
 
         [TestMethod]
-        public void TestStringOneEmpty()
+        public void TestStringTwoEmpty()
         {
-            String s1 = String.Empty;
-            String s2 = "Test";
-
+            String s1 = "Test";
+            String s2 = String.Empty;
+            
             int distance = _distanceCalculator.CalculateEditDistance(s1, s2);
 
             Assert.AreEqual(4, distance);

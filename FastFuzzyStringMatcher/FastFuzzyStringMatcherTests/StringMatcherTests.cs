@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace FastFuzzyStringMatcherTests
 {
     [TestClass]
-    public class StringSearcherTests
+    public class StringMatcherTests
     {
         private static StringMatcher<String> _stringMatcher = new StringMatcher<String>();
         
@@ -85,7 +85,7 @@ namespace FastFuzzyStringMatcherTests
             Assert.IsTrue(results.ContainsKeyword("01234"));
             Assert.IsTrue(results.ContainsKeyword("0123"));
             Assert.IsTrue(results.ContainsKeyword("012"));
-            // C# rounding will cause an extra result compared to the Java version
+            // C# rounding will cause an extra result compared to the Java implementation
             Assert.IsTrue(results.ContainsKeyword("01"));
         }
 
@@ -113,8 +113,7 @@ namespace FastFuzzyStringMatcherTests
         public void TestResultPercentage()
         {
             SearchResultList<String> results = _stringMatcher.Search("Cat", 2);
-
-            // Float equality inaccuracy requires checking against some delta
+            
             Assert.AreEqual(100.0f, results[0].MatchPercentage, 0.1);
             Assert.AreEqual(50.0f, results[1].MatchPercentage, 0.1);
         }

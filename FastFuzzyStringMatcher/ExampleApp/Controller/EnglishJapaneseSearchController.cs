@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace ExampleApp.Controller
 {
+    /// <summary>
+    /// <para/>An English --> Japanese dictionary with fuzzy lookup.
+    /// <para/>Built using the StringMatcher class.
+    /// </summary>
     public class EnglishJapaneseSearchController
     {
         private static StringMatcher<String> _stringMatcher;
@@ -51,6 +55,7 @@ namespace ExampleApp.Controller
         {
             byte[] bytes = Encoding.Default.GetBytes(Properties.Resources.JMDict_po);
             String fileText = Encoding.UTF8.GetString(bytes);
+
             return new List<String>(fileText.Split(new[] { Environment.NewLine }, StringSplitOptions.None));
         }
 

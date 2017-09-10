@@ -19,8 +19,8 @@ namespace FastFuzzyStringMatcher
     ///  unless all of your strings are of fixed length.
     ///  
     ///  <para/>Due to rounding, it's possible that strings that match slightly less than the requested
-    ///  percentage may be returned.<para/>I've left these in as it's better to have false positives than
-    ///  vice versa.
+    ///  percentage may be returned.
+    ///  <para/>I've left these in as it's better to have false positives than vice versa, but you can easily filter them out.
     ///  
     ///  <para/>Generic Data Association
     ///  
@@ -75,7 +75,7 @@ namespace FastFuzzyStringMatcher
             }
             else
             {
-                // Traverse through the tree, adding the string as a leaf related by edit distance
+                // Traverse through the tree, adding the String as a leaf related by edit distance
                 Node current = _root;
                 int editDistance = _distanceCalculator.CalculateEditDistance(current.NormalizedKeyword, keyword);
 
@@ -86,7 +86,7 @@ namespace FastFuzzyStringMatcher
 
                     if(editDistance == 0)
                     {
-                        return; // Duplicate (string already exists in tree)
+                        return; // Duplicate (String already exists in tree)
                     }
                 }
 
@@ -231,20 +231,6 @@ namespace FastFuzzyStringMatcher
                     return _children.Keys.Where(x => x >= minDistance && x <= maxDistance).ToList();
                 }
             }
-
-            /*
-             * 
-             * 		public List<Integer> getChildKeysWithinDistance(int minDistance, int maxDistance) {
-			if(children == null) {
-				return new ArrayList<Integer>(0);
-			} else {
-				return children.keySet().stream().filter(n -> n >= minDistance && n <= maxDistance)
-												 .collect(Collectors.toList());
-			}
-		}
-             * 
-             */
-
 
             public void AddChild(int key, String keyword, String normalizedKeyword, T associatedData)
             {
