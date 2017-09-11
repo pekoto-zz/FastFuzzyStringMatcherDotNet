@@ -162,7 +162,7 @@ namespace FastFuzzyStringMatcherTests
         [TestMethod]
         public void TestIgnoreSpaces()
         {
-            StringMatcher<String> ignoreSpacesMatcher = new StringMatcher<String>(MatchingOption.REMOVE_SPACING_AND_LINEBREAKS);
+            StringMatcher<String> ignoreSpacesMatcher = new StringMatcher<String>(MatchingOption.RemoveSpacingAndLinebreaks);
 
             ignoreSpacesMatcher.Add("This is a test", "A string with spaces");
 
@@ -175,7 +175,7 @@ namespace FastFuzzyStringMatcherTests
         [TestMethod]
        public void TestIgnoreTabs()
         {
-            StringMatcher<String> ignoreTabsMatcher = new StringMatcher<String>(MatchingOption.REMOVE_SPACING_AND_LINEBREAKS);
+            StringMatcher<String> ignoreTabsMatcher = new StringMatcher<String>(MatchingOption.RemoveSpacingAndLinebreaks);
 
             ignoreTabsMatcher.Add("\t\tThis is some tabbed data", "A string with tabs");
 
@@ -188,7 +188,7 @@ namespace FastFuzzyStringMatcherTests
         [TestMethod]
         public void TestIgnoreLinebreaks()
         {
-            StringMatcher<String> ignoreLinebreaksMatcher = new StringMatcher<String>(MatchingOption.REMOVE_SPACING_AND_LINEBREAKS);
+            StringMatcher<String> ignoreLinebreaksMatcher = new StringMatcher<String>(MatchingOption.RemoveSpacingAndLinebreaks);
 
             ignoreLinebreaksMatcher.Add("This has\nsome line\nbreaks.", "A string with linebreaks");
 

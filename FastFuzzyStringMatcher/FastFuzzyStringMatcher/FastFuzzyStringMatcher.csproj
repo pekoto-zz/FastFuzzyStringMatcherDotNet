@@ -1,7 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageId>FastFuzzyStringMatcher</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Graham McRobbie</Authors>
+    <Description>
+      A BK tree implementation for fast, fuzzy string matching.
+      Check out the code and usage instructions on the github page (see project URL).
+    </Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <licenseUrl>https://github.com/pekoto/FastFuzzyStringMatcherDotNet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pekoto/FastFuzzyStringMatcherDotNet</projectUrl>
+    <Copyright>Copyright 2017 (c) pekoto. All rights reserved.</Copyright>
+    <PackageTags>string search searching fuzzy bk tree matching</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.4\FastFuzzyStringMatcher.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
   </PropertyGroup>
 
 </Project>

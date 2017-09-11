@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace FastFuzzyStringMatcher
@@ -46,7 +45,7 @@ namespace FastFuzzyStringMatcher
     {
         private Node _root;
         private EditDistanceCalculator _distanceCalculator = new EditDistanceCalculator();
-        private MatchingOption _matchingOption = MatchingOption.NONE;
+        private MatchingOption _matchingOption = MatchingOption.None;
 
         public StringMatcher() { }
 
@@ -96,7 +95,7 @@ namespace FastFuzzyStringMatcher
 
         private String GetNormalizedKeyword(String str)
         {
-            if (_matchingOption == MatchingOption.REMOVE_SPACING_AND_LINEBREAKS)
+            if (_matchingOption == MatchingOption.RemoveSpacingAndLinebreaks)
             {
                 return RemoveSpacesAndLinebreaks(str);
             }

@@ -25,6 +25,12 @@ namespace FastFuzzyStringMatcher
     /// </summary>
     public class EditDistanceCalculator
     {
+        /// <summary>
+        /// Calculates the number of edits required to transform str1 into str2
+        /// </summary>
+        /// <param name="str1">The target string</param>
+        /// <param name="str2">The string to compare against</param>
+        /// <returns>The number of edits required to transform str1 into str2</returns>
         public int CalculateEditDistance(String str1, String str2)
         {
             if(str1 == null || str2 == null)

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace FastFuzzyStringMatcher
 {
@@ -9,7 +7,7 @@ namespace FastFuzzyStringMatcher
     /// </summary>
     public enum MatchingOption
     {
-        NONE,
-        REMOVE_SPACING_AND_LINEBREAKS
+        None,
+        RemoveSpacingAndLinebreaks
     }
 }
