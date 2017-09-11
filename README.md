@@ -20,6 +20,10 @@ There are three projects in the solution:
 * FastFuzzyStringMatcher (the main code. `StringMatcher.cs` is the main class you want to look at if you're interested in the code)
 * FastFuzzyStringMatcherTests (unit tests)
 
+## NuGet
+
+You can install the package using NuGet too: `Install-Package FastFuzzyStringMatcher`
+
 ### Usage
 Usage is fairly simple:
 
