@@ -23,6 +23,7 @@ There are three projects in the solution:
 ## NuGet
 
 You can install the package using NuGet too: `Install-Package FastFuzzyStringMatcher`
+(Warning: This currently also pulls in some .NET Standard Library .dll references since the project was built as a .NET Standard class library.)
 
 ### Usage
 Usage is fairly simple:
