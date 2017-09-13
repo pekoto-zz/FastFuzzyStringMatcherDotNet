@@ -15,8 +15,10 @@ namespace ExampleApp.Controller
     /// </summary>
     public class EnglishJapaneseSearchController
     {
-        private static StringMatcher<String> _stringMatcher;
-        public static long DictionarySize { get; private set; }
+        public long DictionarySize { get; private set; }
+
+        private StringMatcher<String> _stringMatcher;
+        private String _filePath = $"Resources{Path.DirectorySeparatorChar}JMDict_po.txt";
 
         public EnglishJapaneseSearchController()
         {
@@ -26,7 +28,7 @@ namespace ExampleApp.Controller
             }
         }
 
-        private static void LoadDictionary()
+        private void LoadDictionary()
         {
             List<String> linesInFile = GetLinesFromFile();
             _stringMatcher = new StringMatcher<String>();
@@ -51,15 +53,14 @@ namespace ExampleApp.Controller
             }
         }
 
-        private static List<String> GetLinesFromFile()
+        private List<String> GetLinesFromFile()
         {
-            byte[] bytes = Encoding.Default.GetBytes(Properties.Resources.JMDict_po);
-            String fileText = Encoding.UTF8.GetString(bytes);
-
-            return new List<String>(fileText.Split(new[] { Environment.NewLine }, StringSplitOptions.None));
+            String fileText = File.ReadAllText(_filePath, Encoding.UTF8);
+         
+            return new List<String>(fileText.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
         }
 
-        private static String GetParsedTerm(String line)
+        private String GetParsedTerm(String line)
         {
             int beginIndex = line.IndexOf('"') + 1;
             int endIndex = line.LastIndexOf('"');

@@ -59,54 +59,5 @@ namespace ExampleApp.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to msgid &quot;plain&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;frank&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;candid&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;open&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;direct&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;straightforward&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;unabashed&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;blatant&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;flagrant&quot;
-        ///msgstr &quot;æ˜Žç™½&quot;
-        ///
-        ///msgid &quot;useless&quot;
-        ///msgstr &quot;æ˜Žã‹ã‚“&quot;
-        ///
-        ///msgid &quot;no good&quot;
-        ///msgstr &quot;æ˜Žã‹ã‚“&quot;
-        ///
-        ///msgid &quot;hopeless&quot;
-        ///msgstr &quot;æ˜Žã‹ã‚“&quot;
-        ///
-        ///msgid &quot;gaudy&quot;
-        ///msgstr &quot;æ‚ªã©ã„&quot;
-        ///
-        ///msgid &quot;showy&quot;
-        ///msgstr &quot;æ‚ªã©ã [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string JMDict_po {
-            get {
-                return ResourceManager.GetString("JMDict_po", resourceCulture);
-            }
-        }
     }
 }

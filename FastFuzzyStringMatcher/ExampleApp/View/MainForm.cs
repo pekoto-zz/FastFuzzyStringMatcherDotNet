@@ -33,7 +33,7 @@ namespace ExampleApp
         private void LoadSearchController()
         {
             _searchController = new EnglishJapaneseSearchController();
-            toolStripStatusLabel.Text = $"Loaded {EnglishJapaneseSearchController.DictionarySize} terms.";
+            toolStripStatusLabel.Text = $"Loaded {_searchController.DictionarySize} terms.";
         }
 
         private void search_btn_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace ExampleApp
                 BindResults(results, matchPercentage);
             }
 
-            toolStripStatusLabel.Text = $"Searched {EnglishJapaneseSearchController.DictionarySize} terms using {matchPercentage}% matching.";
+            toolStripStatusLabel.Text = $"Searched {_searchController.DictionarySize} terms using {matchPercentage}% matching.";
         }
 
         private void BindResults(SearchResultList<String> results, float matchPercentage)
