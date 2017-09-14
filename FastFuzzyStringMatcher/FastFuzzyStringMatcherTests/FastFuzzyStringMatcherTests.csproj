@@ -53,13 +53,13 @@
     <Compile Include="StringMatcherTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FastFuzzyStringMatcher\FastFuzzyStringMatcher.csproj">
       <Project>{DFB66626-A4E6-49C4-895A-E4BB916F7DB7}</Project>
       <Name>FastFuzzyStringMatcher</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
