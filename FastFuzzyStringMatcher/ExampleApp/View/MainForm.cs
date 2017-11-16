@@ -41,6 +41,7 @@ namespace ExampleApp
             dataGridView.Rows.Clear();
             dataGridView.Refresh();
 
+
             String searchTerm = searchTerm_tbx.Text;
             float matchPercentage = (float)matchPercentage_nud.Value;
 
