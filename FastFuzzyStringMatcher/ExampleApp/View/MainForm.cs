@@ -29,7 +29,8 @@ namespace ExampleApp
         }
         
         /// This will take a little time while translation pairs are read from Resources.
-        /// In a real app, you should load this data on a separate thread to keep the UI responsive.
+        /// In a real app, you should load this data on a separate thread/using a BackgroundWorker to keep the UI responsive.
+        /// I've kept the code here bare-bones to make it easy to read.
         private void LoadSearchController()
         {
             _searchController = new EnglishJapaneseSearchController();
@@ -40,7 +41,6 @@ namespace ExampleApp
         {
             dataGridView.Rows.Clear();
             dataGridView.Refresh();
-
 
             String searchTerm = searchTerm_tbx.Text;
             float matchPercentage = (float)matchPercentage_nud.Value;
