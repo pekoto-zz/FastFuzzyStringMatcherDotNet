@@ -47,12 +47,6 @@
   <ItemGroup>
     <Compile Include="Controller\EnglishJapaneseSearchController.cs" />
     <Compile Include="Model\LoadingStatus.cs" />
-    <Compile Include="View\LoaderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\LoaderForm.Designer.cs">
-      <DependentUpon>LoaderForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,9 +55,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\LoaderForm.resx">
-      <DependentUpon>LoaderForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
