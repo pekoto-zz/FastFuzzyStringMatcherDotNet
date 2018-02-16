@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\EnglishJapaneseSearchController.cs" />
-    <Compile Include="Model\LoadingStatus.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
